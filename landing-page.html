@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seoulé · Korean Skincare, Tops & Dresses</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #faf7f5;
+      color: #2c2c2c;
+      line-height: 1.5;
+    }
+
+    :root {
+      --bg-light: #fff9f5;
+      --bg-offwhite: #faf7f5;
+      --grey-100: #f5f0ed;
+      --grey-300: #e0d9d3;
+      --grey-600: #7a6e66;
+      --grey-800: #3a3530;
+      --black: #221f1c;
+      --white: #ffffff;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      --accent-rose: #d4b8b0;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('logo-icon.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      padding: 28px 0;
+      min-height: 200px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--shadow);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      padding: 8px 20px;
+      border-radius: 60px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .logo-icon {
+      background: linear-gradient(135deg, #f0e4da, #ffffff);
+      color: #2c2c2c;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border: 2px solid lightgrey;
+    }
+
+    .shop-name {
+      font-weight: 600;
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      padding: 12px 28px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 500;
+      color: white;
+      transition: 0.2s;
+      font-size: 1.1rem;
+      padding: 8px 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    nav a:hover {
+      color: #ffe5d9;
+      transform: scale(1.05);
+    }
+
+    .hero {
+      background: linear-gradient(145deg, #f0e9e4 0%, #e2d7d0 100%);
+      margin: 32px 0 48px;
+      border-radius: 28px;
+      padding: 56px 48px;
+      box-shadow: var(--shadow);
+      color: var(--black);
+      border: 1px solid #e9dddd;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      background-color: var(--black);
+      color: white;
+      padding: 0 8px;
+      display: inline-block;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #4a403a;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #3a3530, #221f1c);
+      color: white;
+      font-weight: 600;
+      padding: 14px 38px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      box-shadow: 0 6px 0 #544b44;
+    }
+
+    .btn:hover {
+      background: #4a403a;
+      transform: translateY(-3px);
+      box-shadow: 0 9px 0 #3a3530;
+    }
+
+    .btn:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #2c2824;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin: 48px 0 24px;
+      border-left: 10px solid var(--accent-rose);
+      padding-left: 20px;
+      color: #3a3530;
+    }
+
+    .category-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 40px 0 20px;
+      color: #5c534c;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+    }
+
+    .product-card {
+      background-color: var(--white);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+      transition: transform 0.25s ease, box-shadow 0.25s;
+      border: 1px solid #f0e4dc;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 20px 28px -8px rgba(0,0,0,0.15);
+    }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #f0e4dc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #5c534c;
+      background: linear-gradient(145deg, #e2d7d0, #f5ece5);
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px 18px 22px;
+    }
+
+    .product-name {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #2c2c2c;
+    }
+
+    .product-price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #4a403a;
+      margin: 10px 0 14px;
+    }
+
+    .add-btn {
+      background: transparent;
+      border: 2px solid #b4a69b;
+      color: #4a403a;
+      font-weight: 600;
+      padding: 10px 0;
+      width: 100%;
+      border-radius: 40px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .add-btn:hover {
+      background: #4a403a;
+      color: white;
+      border-color: #4a403a;
+    }
+
+    .rating {
+      margin: 8px 0 12px;
+      color: #b4a69b;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+    }
+
+    .rating span {
+      color: #7a6e66;
+      font-weight: 600;
+      margin-left: 6px;
+      font-size: 0.9rem;
+      letter-spacing: 0;
+    }
+
+    /* Cart Sidebar */
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 380px;
+      height: 100vh;
+      background-color: var(--white);
+      box-shadow: -5px 0 20px rgba(0,0,0,0.15);
+      transition: right 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid #e2d7d0;
+    }
+
+    .cart-sidebar.open {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 24px;
+      border-bottom: 1px solid #e2d7d0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #4a403a, #2c2824);
+      color: white;
+    }
+
+    .cart-header h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .close-cart {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 0 8px;
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0e4dc;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      font-weight: 600;
+      color: #2c2c2c;
+    }
+
+    .cart-item-price {
+      color: #7a6e66;
+      font-size: 0.9rem;
+    }
+
+    .remove-item {
+      color: #d4a5a5;
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0 8px;
+    }
+
+    .cart-footer {
+      padding: 20px;
+      border-top: 1px solid #f0e4dc;
+      background-color: #faf7f5;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: #2c2c2c;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #4a403a, #2c2824);
+      color: white;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .cart-toggle {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #4a403a, #2c2824);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      z-index: 99;
+      font-size: 1.5rem;
+      border: 2px solid var(--white);
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: #d4a5a5;
+      color: white;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .popup-toast {
+      visibility: hidden;
+      min-width: 260px;
+      background: linear-gradient(135deg, #4a403a, #2c2824);
+      color: #fff;
+      text-align: center;
+      border-radius: 60px;
+      padding: 16px 20px;
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      z-index: 1001;
+      font-weight: 500;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .popup-toast.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #2c2824, #1a1714);
+      color: #f0e4dc;
+      margin-top: 70px;
+      padding: 48px 0 32px;
+      border-top: 4px solid #d4b8b0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #e2d7d0;
+      text-decoration: none;
+      display: block;
+      margin: 8px 0;
+      transition: 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    .social-icons a {
+      background: #4a403a;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      border: 1px solid #d4b8b0;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .social-icons a:hover {
+      background: #d4b8b0;
+      color: #2c2824;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #4a403a;
+      margin-top: 40px;
+      padding-top: 24px;
+      text-align: center;
+      color: #b4a69b;
+      font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .header-row {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 36px 24px;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
+
+      .cart-sidebar {
+        width: 100%;
+        right: -100%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .logo-area {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>Your Cart 💫</h3>
+    <button class="close-cart" id="closeCart">×</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <!-- Cart items will be dynamically added here -->
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cartTotal">₱0</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- Cart Toggle Button -->
+<div class="cart-toggle" id="cartToggle">
+  🛒
+  <span class="cart-count" id="cartCount">0</span>
+</div>
+
+<!-- Popup Toast -->
+<div id="actionPopup" class="popup-toast">💫 Item added to cart!</div>
+
+<header>
+  <div class="container header-row">
+    <div class="logo-area">
+      <img src="logo-icon.jpg" alt="Seoulé Logo" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+      <div class="shop-name">Seoulé</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="aboutLink">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1><span>KOREAN STYLE</span> <br> Skincare, Tops and Dresses</h1>
+      <p>Glow in Style. Set the Trend. Own Your Beauty.</p>
+      <a href="#" id="shopNowBtn" class="btn">🛍️ Shop Now →</a>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <h2 class="section-title">💫 Featured Picks</h2>
+  <div class="product-grid" id="featuredProducts">
+    <!-- Facial Mask -->
+    <div class="product-card" data-category="skincare">
+      <div class="product-img">
+        <img src="facial-mask.jpg" alt="Facial Mask" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Facial+Mask'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Facial Mask</div>
+        <div class="rating">★★★★★ <span>(48 reviews)</span></div>
+        <div class="product-price">₱320</div>
+        <button class="add-btn add-to-cart" data-product="Facial Mask" data-price="320">➕ Add to Cart</button>
+      </div>
+    </div>
+    <!-- Serum -->
+    <div class="product-card" data-category="skincare">
+      <div class="product-img">
+        <img src="serum.jpg" alt="Serum" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Serum'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Serum</div>
+        <div class="rating">★★★★☆ <span>(36 reviews)</span></div>
+        <div class="product-price">₱690</div>
+        <button class="add-btn add-to-cart" data-product="Serum" data-price="890">➕ Add to Cart</button>
+      </div>
+    </div>
+    <!-- Top -->
+    <div class="product-card" data-category="tops">
+      <div class="product-img">
+        <img src="korean-top.jpg" alt="Top" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Top'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Top</div>
+        <div class="rating">★★★★★ <span>(24 reviews)</span></div>
+        <div class="product-price">₱450</div>
+        <button class="add-btn add-to-cart" data-product="Top" data-price="1450">➕ Add to Cart</button>
+      </div>
+    </div>
+    <!-- Dress -->
+    <div class="product-card" data-category="dresses">
+      <div class="product-img">
+        <img src="korean-dress.jpg" alt="Dress" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Korean+Dress'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Dress</div>
+        <div class="rating">★★★★☆ <span>(19 reviews)</span></div>
+        <div class="product-price">₱1,890</div>
+        <button class="add-btn add-to-cart" data-product="Dress" data-price="2290">➕ Add to Cart</button>
+      </div>
+    </div>
+    <!-- Coat -->
+    <div class="product-card" data-category="coats">
+      <div class="product-img">
+        <img src="korean-coat.jpg" alt="Coat" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Korean+Coat'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Coat</div>
+        <div class="rating">★★★★★ <span>(15 reviews)</span></div>
+        <div class="product-price">₱2,890</div>
+        <button class="add-btn add-to-cart" data-product="Coat" data-price="3890">➕ Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skincare Section -->
+  <h2 class="category-title">🧴 Skincare Collection</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-img">
+        <img src="cleanser.jpg" alt="Cleanser" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Cleanser'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Cleanser</div>
+        <div class="rating">★★★★☆ <span>(28 reviews)</span></div>
+        <div class="product-price">₱450</div>
+        <button class="add-btn add-to-cart" data-product="Cleanser" data-price="450">➕ Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="toner.jpg" alt="Toner" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Toner'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Toner</div>
+        <div class="rating">★★★★★ <span>(42 reviews)</span></div>
+        <div class="product-price">₱480</div>
+        <button class="add-btn add-to-cart" data-product="Toner" data-price="680">➕ Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="moisturizer.jpg" alt="Moisturizer" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Moisturizer'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Moisturizer</div>
+        <div class="rating">★★★★☆ <span>(31 reviews)</span></div>
+        <div class="product-price">₱490</div>
+        <button class="add-btn add-to-cart" data-product="Moisturizer" data-price="590">➕ Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dresses Section -->
+  <h2 class="category-title">👗 Dresses</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-img">
+        <img src="knit-dress.jpg" alt="Knitted Dress" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Knit+Dress'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Knitted Dress</div>
+        <div class="rating">★★★★★ <span>(22 reviews)</span></div>
+        <div class="product-price">₱1,490</div>
+        <button class="add-btn add-to-cart" data-product="Knitted Dress" data-price="1890">➕ Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="slip-dress.jpg" alt="Satin Slip Dress" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Slip+Dress'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Satin Slip Dress</div>
+        <div class="rating">★★★★☆ <span>(16 reviews)</span></div>
+        <div class="product-price">₱1,650</div>
+        <button class="add-btn add-to-cart" data-product="Satin Slip Dress" data-price="1650">➕ Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tops Section -->
+  <h2 class="category-title">👚 Tops</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-img">
+        <img src="crop-top.jpg" alt="Crop Top" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Crop+Top'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Crop Top</div>
+        <div class="rating">★★★★☆ <span>(34 reviews)</span></div>
+        <div class="product-price">₱350</div>
+        <button class="add-btn add-to-cart" data-product="Crop Top" data-price="590">➕ Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="blouse.jpg" alt="Blouse" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Blouse'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Blouse</div>
+        <div class="rating">★★★★★ <span>(27 reviews)</span></div>
+        <div class="product-price">₱550</div>
+        <button class="add-btn add-to-cart" data-product="Blouse" data-price="1250">➕ Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coats Section -->
+  <h2 class="category-title">🧥 Trench Coats</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-img">
+        <img src="trench-coat.jpg" alt="Trench Coats" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Trench+Coat'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Classic Trench Coats</div>
+        <div class="rating">★★★★★ <span>(12 reviews)</span></div>
+        <div class="product-price">₱2,490</div>
+        <button class="add-btn add-to-cart" data-product="Trench Coat" data-price="3490">➕ Add to Cart</button>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <img src="puffer.jpg" alt="Puffer Jacket" onerror="this.src='https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Puffer+Jacket'">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Puffer Jacket</div>
+        <div class="rating">★★★★☆ <span>(9 reviews)</span></div>
+        <div class="product-price">₱1,990</div>
+        <button class="add-btn add-to-cart" data-product="Puffer Jacket" data-price="2990">➕ Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 style="color:white; margin-bottom:14px;">Seoulé</h4>
+      <p>Glow in Style. Set the Trend. Own Your Beauty.</p>
+      <p>📞 +63 912 8855 243</p>
+      <p>✉️ hello@seoule.com</p>
+    </div>
+    <div class="footer-col">
+      <h4 style="color:white; margin-bottom:14px;">Follow us</h4>
+      <div class="social-icons">
+        <a href="#">f</a>
+        <a href="#">📩</a>
+
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 style="color:white; margin-bottom:14px;">Info</h4>
+      <a href="#">Terms & conditions</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Shipping & returns</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    © 2025 Seoulé. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  (function() {
+    // Cart functionality
+    let cart = JSON.parse(localStorage.getItem('seouleCart')) || [];
+    
+    const popup = document.getElementById('actionPopup');
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartToggle = document.getElementById('cartToggle');
+    const closeCart = document.getElementById('closeCart');
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    const cartCount = document.getElementById('cartCount');
+    
+    // About link message
+    const aboutLink = document.getElementById('aboutLink');
+    if (aboutLink) {
+      aboutLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        showPopup('Welcome to a space where Korean innovation meets everyday style. I bring you carefully curated products inspired by South Korea\'s passion for quality, modern design, and trend-forward living. From glow-boosting skincare to statement dresses, cozy coats, and stylish tops, every piece reflects a commitment to beauty, confidence, and global trends.');
+      });
+    }
+    
+    // Image placeholder links for downloading
+    console.log('Image references for downloading:');
+    console.log('1. Facial Mask: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Facial+Mask');
+    console.log('2. Serum: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Serum');
+    console.log('3. Korean Top: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Korean+Top');
+    console.log('4. Korean Dress: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Korean+Dress');
+    console.log('5. Korean Coat: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Korean+Coat');
+    console.log('6. Cleanser: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Cleanser');
+    console.log('7. Toner: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Toner');
+    console.log('8. Moisturizer: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Moisturizer');
+    console.log('9. Knit Dress: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Knit+Dress');
+    console.log('10. Slip Dress: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Slip+Dress');
+    console.log('11. Crop Top: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Crop+Top');
+    console.log('12. Blouse: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Blouse');
+    console.log('13. Trench Coat: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Trench+Coat');
+    console.log('14. Puffer Jacket: https://via.placeholder.com/300x300/f0e4dc/5c534c?text=Puffer+Jacket');
+
+    function showPopup(message) {
+      popup.textContent = message;
+      popup.classList.add('show');
+      setTimeout(() => {
+        popup.classList.remove('show');
+      }, 4000); // Longer for about message
+    }
+
+    function updateCart() {
+      // Update cart count
+      cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+      
+      // Update cart items display
+      cartItems.innerHTML = '';
+      let total = 0;
+      
+      cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+        
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item';
+        cartItem.innerHTML = `
+          <div class="cart-item-info">
+            <div class="cart-item-title">${item.name}</div>
+            <div class="cart-item-price">₱${item.price} x ${item.quantity}</div>
+          </div>
+          <span class="remove-item" data-index="${index}">×</span>
+        `;
+        cartItems.appendChild(cartItem);
+      });
+      
+      cartTotal.textContent = `₱${total}`;
+      
+      // Save to localStorage
+      localStorage.setItem('seouleCart', JSON.stringify(cart));
+      
+      // Add remove functionality
+      document.querySelectorAll('.remove-item').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const index = this.getAttribute('data-index');
+          cart.splice(index, 1);
+          updateCart();
+          showPopup('🗑️ Item removed from cart');
+        });
+      });
+    }
+
+    // Add to cart functionality
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const product = this.getAttribute('data-product');
+        const price = parseInt(this.getAttribute('data-price'));
+        
+        const existingItem = cart.find(item => item.name === product);
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({ name: product, price: price, quantity: 1 });
+        }
+        
+        updateCart();
+        showPopup(`💫 ${product} added to cart!`);
+      });
+    });
+
+    // Cart toggle
+    cartToggle.addEventListener('click', () => {
+      cartSidebar.classList.add('open');
+    });
+
+    closeCart.addEventListener('click', () => {
+      cartSidebar.classList.remove('close');
+      cartSidebar.classList.remove('open');
+    });
+
+    // Close cart when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!cartSidebar.contains(e.target) && !cartToggle.contains(e.target)) {
+        cartSidebar.classList.remove('open');
+      }
+    });
+
+    // Shop Now button
+    const shopBtn = document.getElementById('shopNowBtn');
+    if (shopBtn) {
+      shopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('featuredProducts').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // Home link
+    const homeLink = document.querySelector('nav a[href="#"]');
+    if (homeLink) {
+      homeLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Footer links
+    const footerLinks = document.querySelectorAll('.footer-col a');
+    footerLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        showPopup(`📄 ${this.innerText} (demo page)`);
+      });
+    });
+
+    // Checkout button
+    document.getElementById('checkoutBtn').addEventListener('click', function() {
+      if (cart.length === 0) {
+        showPopup('🛒 Your cart is empty!');
+      } else {
+        showPopup('✅ Proceeding to checkout (demo)');
+      }
+    });
+
+    // Social media placeholders
+    document.querySelectorAll('.social-icons a').forEach(icon => {
+      icon.addEventListener('click', function(e) {
+        e.preventDefault();
+        const platform = this.innerText;
+        showPopup(`📱 ${platform} page would open here (demo)`);
+      });
+    });
+
+    // Initialize cart
+    updateCart();
+  })();
+</script>
+
+-->
+</body>
+</html>
